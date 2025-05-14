@@ -10,6 +10,6 @@ RUN pacman -Syu  --noconfirm \
     cmake \
     && pacman -Scc --noconfirm
 
-COPY . ./DDD
+COPY . ./Project
 
-WORKDIR /DDD
+WORKDIR /Project
