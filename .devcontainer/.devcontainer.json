@@ -1,6 +1,6 @@
 {
-  "name": "C++ Environment",
-  "image": "cloudisms/zipcode-cpp:1.1",
+  "name": "UACPSC C++ Environment",
+  "build": { "dockerfile": "Dockerfile" },
   "customizations": {
     "vscode": {
       "settings": { "C_Cpp.intelliSenseEngine": "disabled" },

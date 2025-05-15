@@ -11,6 +11,8 @@ RUN pacman -Syu  --noconfirm \
     cmake \
     && pacman -Scc --noconfirm
 
+# Copy local directory to docker container
 COPY . ./Project
 
+# Set docker container working directory
 WORKDIR /Project
