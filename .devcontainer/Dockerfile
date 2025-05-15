@@ -11,6 +11,9 @@ RUN pacman -Syu  --noconfirm \
     cmake \
     && pacman -Scc --noconfirm
 
+# Force LLDB to not disable ASLR, which is needed in the Docker container context
+RUN echo "settings set target.disable-aslr false" >> ~/.lldbinit
+
 # Copy local directory to docker container
 COPY . ./Project
 
