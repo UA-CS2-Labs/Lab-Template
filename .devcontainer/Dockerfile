@@ -15,7 +15,7 @@ RUN pacman -Syu  --noconfirm \
 RUN echo "settings set target.disable-aslr false" >> ~/.lldbinit
 
 # Copy local directory to docker container
-COPY . ./Project
+COPY .. ./Project
 
 # Set docker container working directory
 WORKDIR /Project
