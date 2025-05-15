@@ -1,6 +1,6 @@
 {
   "name": "C++ Environment",
-  "image": "cloudisms/zipcode-cpp:1.0",
+  "image": "cloudisms/zipcode-cpp",
   "customizations": {
     "vscode": {
       "settings": { "C_Cpp.intelliSenseEngine": "disabled" },
