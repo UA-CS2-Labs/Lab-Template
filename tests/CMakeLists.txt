@@ -1,7 +1,6 @@
 set(Tests
         # Sources
         "test1.cpp"
-        # Add additional tests as needed
 )
 
 set(Dirs
