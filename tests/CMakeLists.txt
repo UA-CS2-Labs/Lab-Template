@@ -1,6 +1,6 @@
 set(Tests
         # Sources
-        "test.cpp"
+        "test1.cpp"
         # Add additional tests as needed
 )
 
