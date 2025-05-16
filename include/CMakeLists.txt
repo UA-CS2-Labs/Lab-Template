@@ -1,6 +1,6 @@
 set(Includes
         # Headers
-        "main.hpp"
+        "header.hpp"
 )
 
 add_library(include INTERFACE ${Includes})
