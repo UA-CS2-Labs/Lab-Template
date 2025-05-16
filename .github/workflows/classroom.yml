@@ -1,0 +1,28 @@
+name: Autograding Tests
+'on':
+  - push
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  autograding:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Step 1
+        id: Step-1
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Step 1
+          setup-command: rm -rf build && mkdir build && cd build && cmake .. && make test1
+          command: cd build && make run_test1
+          timeout: 10
+          max-score: 100
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          STEP-1_RESULTS: "${{steps.Step-1.outputs.result}}"
+        with:
+          runners: Step-1
