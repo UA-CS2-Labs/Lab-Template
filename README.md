@@ -1,4 +1,4 @@
-# CPSC-Template
+# Lab-Template
 Template repository for CS Department
 
 ## Usage
