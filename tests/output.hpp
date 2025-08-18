@@ -11,15 +11,15 @@
 #include <string>
 
 namespace output {
-    void success(int stepNumber) {
+    void success(int testNumber) {
         std::cout << "─────────────────────────────────────────────────" << "\n\n"
-                  << "\t\tStep " << stepNumber << " Success!" << "\n\n"
+                  << "\t\tTest " << testNumber << " Success!" << "\n\n"
                   << "─────────────────────────────────────────────────" << "\n\n";
     }
 
-    void failure(int stepNumber, std::string message) {
+    void failure(int testNumber, std::string message) {
         std::cout << "─────────────────────────────────────────────────" << "\n\n"
-                  << "\t\tStep " << stepNumber << " Failed:" << "\n\n"
+                  << "\t\tTest " << testNumber << " Failed:" << "\n\n"
                   << "─────────────────────────────────────────────────" << "\n\n"
                   << message << "\n\n"
                   << "─────────────────────────────────────────────────" << "\n\n";
