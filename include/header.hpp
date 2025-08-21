@@ -1,1 +1,2 @@
-// Blank header file to support assignments that have no need for a header - rename and use as needed
+// Blank example header file
+// Delete file and comment out in CMakeLists if unused

@@ -11,18 +11,47 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Test 1
+      - name: Setup - Compile
+        id: build
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Setup - Compile
+          setup-command: rm -rf build && mkdir build && cd build && cmake ..
+          command: cd build && make Lab
+          timeout: 100
+          max-score: 0
+      - name: Test 1 - <descriptive text>
         id: Test-1
         uses: classroom-resources/autograding-command-grader@v1
         with:
-          test-name: Test 1
-          setup-command: rm -rf build && mkdir build && cd build && cmake .. && make test1
-          command: cd build && make run_test1
+          test-name: Test 1 - <descriptive text>
+          setup-command: cd build && make test1
+          command: build/test1
           timeout: 10
-          max-score: 100
+          max-score: 10
+      - name: Test 2 - <descriptive text>
+        id: Test-2
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Test 2 - <descriptive text>
+          setup-command: cd build && make test2
+          command: build/test2
+          timeout: 10
+          max-score: 10
+      - name: Test 3 - <descriptive text>
+        id: Test-3
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Test 3 - <descriptive text>
+          setup-command: cd build && make test3
+          command: build/test3
+          timeout: 10
+          max-score: 10
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
         env:
           TEST-1_RESULTS: "${{steps.Test-1.outputs.result}}"
+          TEST-2_RESULTS: "${{steps.Test-2.outputs.result}}"
+          TEST-3_RESULTS: "${{steps.Test-3.outputs.result}}"
         with:
-          runners: Test-1
+          runners: Test-1, Test-2, Test-3
