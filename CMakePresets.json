@@ -4,7 +4,7 @@
     {
       "name": "Clang - Codespace",
       "displayName": "Clang - Codespace",
-      "description": "Clang with Codespace paths",
+      "description": "Clang with Codespace paths (Unix, macOS)",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build",
       "cacheVariables": {
@@ -17,7 +17,7 @@
     {
       "name": "Clang - Windows",
       "displayName": "Clang - Windows",
-      "description": "Clang with default Visual Studio paths",
+      "description": "Clang with default Visual Studio 2022 paths (Windows)",
       "binaryDir": "${sourceDir}/build",
       "cacheVariables": {
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/install",
