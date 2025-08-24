@@ -16,12 +16,3 @@ RUN pacman -Syu  --noconfirm \
     doxygen \
     bat \
     && pacman -Scc --noconfirm
-
-# Force LLDB to not disable ASLR, which is needed in the Docker container context
-RUN echo "settings set target.disable-aslr false" >> ~/.lldbinit
-
-# Copy local directory to docker container
-COPY .. ./Project
-
-# Set docker container working directory
-WORKDIR /Project
