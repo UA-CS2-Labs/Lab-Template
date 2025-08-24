@@ -2,29 +2,35 @@
 
 Template repository for CS Department. Used to quickly create new assignments with custom CI/CD implementations.
 
-# Developing an assignment:
+# Developing an Assignment:
 
-## Create an assignment repository using this template:
+## Create an Assignment Repository Using this Template:
 
 - Click "Use this template"
 - Click "Create a new repository"
 - Toggle "Include all branches" *ON*
 
-## Add content:
+## Add Content:
 
 - Add any header files to the `include` directory and add their path(s) to `include/CMakeLists.txt`
   - Remove `header.hpp` if unused
 - Add any implementation files to the `src` directory and add their path(s) to `src/CMakeLists.txt`
 
-## Add test cases:
+## Add Test Cases:
 
 - Add any test cases to the `tests` directory and add their path(s) to `tests/CMakeLists.txt`
 - Add a test executable for each test case in `CMakeLists.txt`
 
-## Add autograding:
+## Add Autograding:
 
 - Add a step to `.github/workflows/classroom.yml` for each test case
 - Add an env variable and a runner for each test case within the `Autograding Reporter` step
+
+## GitHub Workflows:
+
+- All test cases should be solved on the `main` branch of this repository. All workflows should return as a success indicated by a green ✔️
+- After assignment and test case development is completed, remove any assignment solutions within the `student` branch of this repository
+  - The `student` branch should be used to implement GitHub classroom repositories
 
 # GitHub Codespaces
 
