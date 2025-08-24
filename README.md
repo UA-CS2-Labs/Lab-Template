@@ -14,7 +14,6 @@ Template repository for CS Department. Used to quickly create new assignments wi
 
 - Only develop lab content on the `solution` branch: `git switch solution`
   - When development is finished, create a pull request to copy the content to the `student` branch
-  - Remove all lab solutions in a final commit to the `student` branch
 - The `student` branch is the default branch to make GitHub Classroom assignment easier
 
 ## Add Content:
