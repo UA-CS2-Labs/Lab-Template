@@ -4,11 +4,18 @@ Template repository for CS Department. Used to quickly create new assignments wi
 
 # Developing an Assignment:
 
-## Create an Assignment Repository Using this Template:
+## Create a Lab Template Repository Using this Template:
 
 - Click "Use this template"
 - Click "Create a new repository"
 - Toggle "Include all branches" *ON*
+
+## Branch Information:
+
+- Only develop lab content on the `solution` branch: `git switch solution`
+  - When development is finished, create a pull request to copy the content to the `student` branch
+  - Remove all lab solutions in a final commit to the `student` branch
+- The `student` branch is the default branch to make GitHub Classroom assignment easier
 
 ## Add Content:
 
@@ -28,7 +35,7 @@ Template repository for CS Department. Used to quickly create new assignments wi
 
 ## GitHub Workflows:
 
-- All test cases should be solved on the `main` branch of this repository. All workflows should return as a success indicated by a green ✔️
+- All test cases should be solved on the `solution` branch of this repository. All workflows should return as a success indicated by a green ✔️
 - After assignment and test case development is completed, remove any assignment solutions within the `student` branch of this repository
   - The `student` branch should be used to implement GitHub classroom repositories
 
